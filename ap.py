@@ -12,7 +12,7 @@ from elasticsearch.helpers import bulk
 
 
 # Initialize Cohere client
-COHERE_API_KEY = "teqwH8AqLu8MXqSQhor28E6yx6X363HfXBPOPfvo"
+COHERE_API_KEY = ""
 co = cohere.Client(COHERE_API_KEY)
 
 # Initialize Elasticsearch client
@@ -35,7 +35,7 @@ def authenticate_google_sheets():
             scopes=["https://www.googleapis.com/auth/spreadsheets"]
         )
         client = gspread.authorize(creds)
-        sheet = client.open_by_key('1hITPd5x7jJ12gsX3H9pLbDTHPH65ltd_aTHC4H6cAN8').sheet1
+        sheet = client.open_by_key('').sheet1
         return sheet
     except Exception as e:
         print(f"Error in Google Sheets authentication: {e}")
