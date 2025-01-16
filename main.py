@@ -10,7 +10,7 @@ from google.oauth2.service_account import Credentials
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import cohere
 # Initialize Cohere client
-COHERE_API_KEY = "teqwH8AqLu8MXqSQhor28E6yx6X363HfXBPOPfvo"  # Replace with your actual API key
+COHERE_API_KEY = ""  # Replace with your actual API key
 co = cohere.Client(COHERE_API_KEY)
 
 # Load product data
@@ -25,7 +25,7 @@ def authenticate_google_sheets():
             scopes=["https://www.googleapis.com/auth/spreadsheets"]
         )
         client = gspread.authorize(creds)
-        sheet = client.open_by_key('1hITPd5x7jJ12gsX3H9pLbDTHPH65ltd_aTHC4H6cAN8').sheet1
+        sheet = client.open_by_key('').sheet1
         return sheet
     except Exception as e:
         print(f"Error in Google Sheets authentication: {e}")
