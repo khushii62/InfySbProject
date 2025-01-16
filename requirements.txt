@@ -1,0 +1,10 @@
+pandas==1.5.3
+SpeechRecognition==3.9.0
+Flask==2.3.2
+Flask-Cors==3.0.10
+gspread==5.9.0
+google-auth==2.23.4
+google-auth-oauthlib==1.0.0
+vaderSentiment==3.3.2
+cohere==2.11.2
+elasticsearch==7.17.10
